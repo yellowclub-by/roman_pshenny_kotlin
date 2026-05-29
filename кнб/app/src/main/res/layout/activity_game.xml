@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Играть"
+        android:backgroundTint="#FFD700"
+        android:rotation="180"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_2_paper"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="124dp"
+        android:contentDescription="Личный кабинет"
+        android:rotation="180"
+        android:src="@drawable/paper"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_2_rock" />
+
+    <ImageView
+        android:id="@+id/btn_2_rock"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="124dp"
+        android:contentDescription="Личный кабинет"
+        android:rotation="180"
+        android:src="@drawable/rock"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_2_paper"
+        app:layout_constraintEnd_toStartOf="@+id/btn_2_scissors" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/circle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="#FFD700"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:contentDescription="Image 1"
+                android:padding="8dp" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/paper"
+                android:contentDescription="Image 2"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/btn_2_scissors"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="124dp"
+        android:contentDescription="Личный кабинет"
+        android:rotation="180"
+        android:src="@drawable/scissories"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_2_rock"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_top1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="бумага"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@id/btn_2_paper"
+        app:layout_constraintStart_toStartOf="@id/btn_2_paper"
+        app:layout_constraintEnd_toEndOf="@id/btn_2_paper" />
+
+    <TextView
+        android:id="@+id/tv_top2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="камень"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@id/btn_2_rock"
+        app:layout_constraintStart_toStartOf="@id/btn_2_rock"
+        app:layout_constraintEnd_toEndOf="@id/btn_2_rock" />
+
+    <TextView
+        android:id="@+id/tv_top3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ножницы"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@id/btn_2_scissors"
+        app:layout_constraintStart_toStartOf="@id/btn_2_scissors"
+        app:layout_constraintEnd_toEndOf="@id/btn_2_scissors" />
+
+
+    <TextView
+        android:id="@+id/tv_top4"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_marginBottom="270dp"
+        android:rotation="270"
+        android:text="Игрок 1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/lk_button5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:rotation="270"
+        android:src="@drawable/person"
+        android:layout_marginEnd="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/lk_button4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="130dp"
+        android:rotation="270"
+        android:src="@drawable/person"
+        android:layout_marginEnd="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_top7"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_marginBottom="270dp"
+        android:rotation="270"
+        android:text="Игрок 2"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/counter_person_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:layout_marginStart="320dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:layout_marginStart="330dp"
+        android:text=":"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/counter_person_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="40sp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_1_paper"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="124dp"
+        android:contentDescription="Личный кабинет"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_1_rock" />
+
+    <ImageView
+        android:id="@+id/btn_1_rock"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="124dp"
+        android:contentDescription="Личный кабинет"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_1_paper"
+        app:layout_constraintEnd_toStartOf="@+id/btn_1_scissors" />
+
+    <ImageView
+        android:id="@+id/btn_1_scissors"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="124dp"
+        android:contentDescription="Личный кабинет"
+        android:src="@drawable/scissories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_1_rock"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bottom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="бумага"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_1_paper"
+        app:layout_constraintStart_toStartOf="@id/btn_1_paper"
+        app:layout_constraintEnd_toEndOf="@id/btn_1_paper" />
+    <TextView
+        android:id="@+id/win_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:rotation="180"
+        android:layout_marginBottom="290sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/win_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:layout_marginTop="290sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bottom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="камень"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_1_rock"
+        app:layout_constraintStart_toStartOf="@id/btn_1_rock"
+        app:layout_constraintEnd_toEndOf="@id/btn_1_rock" />
+
+    <TextView
+        android:id="@+id/tv_bottom3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ножницы"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_1_scissors"
+        app:layout_constraintStart_toStartOf="@id/btn_1_scissors"
+        app:layout_constraintEnd_toEndOf="@id/btn_1_scissors" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Играть"
+        android:backgroundTint="#FFD700"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginBottom="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
